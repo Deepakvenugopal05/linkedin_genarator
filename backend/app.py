@@ -82,12 +82,10 @@ def summarize_content():
     try:
 
         input_type = request.form.get("input_type")
-        print(input_type)
 
         content = get_content_from_input(input_type, request)
 
         summary = generate_summary(content)
-        print(summary)
 
         return jsonify({"summary": summary})
 
